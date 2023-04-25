@@ -35,3 +35,4 @@ assertEqual(eqArrays([1, 2, 3], [1, 2, 5]), false);
 assertEqual(eqArrays([1, 2, 3], [1, 2]), false);
 assertEqual(eqArrays([1, 2, 3], [1, 2, '3']), false);
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3,5]), false);
+assertEqual(eqArrays([1, 2, 3,4], [1, 2]), false);
