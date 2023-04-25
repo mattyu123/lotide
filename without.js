@@ -1,15 +1,15 @@
-const eqArrays = function(arr1, arr2) {
-  let total = arr1.length - 1;
+const eqArrays = function(array1, array2) {
+  let total = array1.length - 1;
   let counter = 0;
 
-  if (arr1.length === 0 && arr2.length === 0) {
+  if (array1.length === 0 && array2.length === 0) {
     return true;
-  } else if (arr1.length !== arr2.length) {
+  } else if (array1.length !== array2.length) {
     return false;
   } else {
     while (counter <= total) {
       for (let i = 0; i <= total; i++) {
-        if (arr1[i] === arr2[i]) {
+        if (array1[i] === array2[i]) {
           counter += 1;
         } else {
           return false;
@@ -19,33 +19,33 @@ const eqArrays = function(arr1, arr2) {
   }
 };
 
-const assertArraysEqual = function(array1, array2) {
-  if (eqArrays(array1, array2)) {
-    console.log(`✅✅✅ Assertion Passed: ${array1} === ${array2}`);
+const assertArraysEqual = function(testValue, expectedValue) {
+  if (eqArrays(testValue, expectedValue)) {
+    console.log(`✅✅✅ Assertion Passed: ${testValue} === ${expectedValue}`);
   } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${array1} != ${array2}`);
+    console.log(`🛑🛑🛑 Assertion Failed: ${testValue} != ${expectedValue}`);
   }
 };
 
-let source = [1,2,3]
-let itemsToRemove = [1,2]
 
-let final = [];
-let discard = [];
+const without = function(source,itemsToRemove) {
+  let final = [];
 
-for (let i = 0; i < itemsToRemove.length; i++){
-  for (let x = 0; x < source.length; x++){
-      console.log(itemsToRemove[i])
+  for (let i = 0; i < source.length; i++) {
+    if (itemsToRemove.includes(source[i])) {
+    } else {
+      final.push(source[i]);
+    }
+  } return final;
+};
 
-    // if (itemsToRemove[i] === source[x]){
-    //   discard.push(source[i]);
-    // } else {
-    //   final.push(source[x])
-    // }
-  }
-} 
+assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
+assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1","2"]);
+assertArraysEqual(without(["1"], ["1"]), []);
+assertArraysEqual(without([1, 2, 3], [1, 2, 3]), []);
 
-console.log(final);
-console.log(discard);
-
+//Test case to ensure that a new array is being returned, and that the original array is not being modified 
+const words = ["hello", "world", "lighthouse"];
+without(words, ["lighthouse"]); 
+assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
