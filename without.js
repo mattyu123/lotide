@@ -32,8 +32,7 @@ const without = function(source,itemsToRemove) {
   let final = [];
 
   for (let i = 0; i < source.length; i++) {
-    if (itemsToRemove.includes(source[i])) {
-    } else {
+    if (!itemsToRemove.includes(source[i])) {
       final.push(source[i]);
     }
   } return final;
@@ -44,8 +43,8 @@ assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1","2"]);
 assertArraysEqual(without(["1"], ["1"]), []);
 assertArraysEqual(without([1, 2, 3], [1, 2, 3]), []);
 
-//Test case to ensure that a new array is being returned, and that the original array is not being modified 
+//Test case to ensure that a new array is being returned, and that the original array is not being modified
 const words = ["hello", "world", "lighthouse"];
-without(words, ["lighthouse"]); 
+without(words, ["lighthouse"]);
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
