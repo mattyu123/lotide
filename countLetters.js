@@ -23,4 +23,7 @@ const countLetters = function(sentence){
   return finalCount;
 };
 
-console.log(countLetters("hello, my name is Matt"))
+console.log(countLetters("hello, my name is Matt"));
+console.log(countLetters("HELLO, I am Matt"));
+console.log(countLetters("HE341$%%@"));
+
