@@ -9,7 +9,6 @@ const assertEqual = function(actual, expected) {
 const countLetters = function(sentence){
   const newSentence = sentence.toLowerCase().split(" ").join("");
   const letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-  
   const finalCount = {};
 
   for (letter of newSentence)
