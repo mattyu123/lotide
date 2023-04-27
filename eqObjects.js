@@ -29,15 +29,17 @@ const eqArrays = function(arr1, arr2) {
 
 const eqObjects = function(object1, object2){
   if (Object.keys(object1).length === Object.keys(object2).length) {
-    for (item in object1){
-      if (object1[item] === object2[item]){
+    for (let item in object1){
+      if (Array.isArray(object1[item])){
+        eqArrays(object1[item], object2[item])
+      } if (object1[item] === object2[item]){
         return true;
       } 
     } 
   } return false;
-};
+}
 
-//Test cases
+// //Test cases
 const shirtObject = { color: "red", size: "medium" };
 const anotherShirtObject= { size: "medium", color: "red" };
 assertEqual(eqObjects(shirtObject, anotherShirtObject), true);
