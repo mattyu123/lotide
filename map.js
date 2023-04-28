@@ -27,8 +27,6 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
-const words = ["ground", "control", "to", "major", "tom"];
-
 const map = function(array, callback){
   const results = [];
 
@@ -38,3 +36,7 @@ const map = function(array, callback){
   return results;
 }
 
+//Test cases written below
+assertArraysEqual(map(["ground", "control", "to", "major", "tom"], word => word.length), [6,7,2,5,3]);
+assertArraysEqual(map([9, 64, 81, 121, 36], num => Math.sqrt(num)), [3,8,9,11,6]);
+assertArraysEqual(map([9, 64, 81, 121, 36], num => num*2), [18, 128, 162, 242, 72]);   
