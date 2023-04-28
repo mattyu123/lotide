@@ -41,3 +41,5 @@ const takeUntil = function(array, callback) {
 
 assertArraysEqual(takeUntil([1, 2, 5, 7, 2, -1, 2, 4, 5], x => x < 0), [ 1, 2, 5, 7, 2 ]);
 assertArraysEqual(takeUntil(["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"], x => x === ','), [ 'I\'ve', 'been', 'to', 'Hollywood']);
+assertArraysEqual(takeUntil([1, 25, 45, 7, 22, -41, 2, 4, 5], x => x > 20), [1]);
+assertArraysEqual(takeUntil([1, 2, 4, 7, 2, 1, 2, 4, 45], x => x > 20), [1, 2, 4, 7, 2, 1, 2, 4]);
