@@ -6,32 +6,21 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const findKey = function(object, callback){
+const findKey = function(object, callback) {
   let counter = 0;
   
-  if (counter > Object.keys(object).length){
+  if (counter > Object.keys(object).length) {
     return undefined;
   } else {
-    for (let item in object){
-      if (callback(object[item])){
+    for (let item in object) {
+      if (callback(object[item])) {
         return item;
       } else {
-        counter += 1
+        counter += 1;
       }
     }
   }
-}
-
-let object =  {
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-}
-
-let callback = x => x.stars === 2;
+};
 
 //Test Cases
 assertEqual(findKey({
@@ -59,4 +48,4 @@ assertEqual(findKey({
   "Hydro": { cost: 50},
   "Drinks": { cost: 100},
   "Entertainment": { cost: 200}
-}, x => (x.cost/2) >= 500), "Rent");
+}, x => (x.cost / 2) >= 500), "Rent");
