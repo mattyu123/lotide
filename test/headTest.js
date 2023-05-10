@@ -1,7 +1,7 @@
 const assertEqual = require("../assertEqual.js");
 const head = require("../head.js");
 
-
+//Test cases for head function
 assertEqual(head([1,2,4,2]),1);
 assertEqual(head([5,2,4,2]),5);
 assertEqual(head([2,2,4,2]),2);
