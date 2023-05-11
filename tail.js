@@ -1,5 +1,4 @@
-const assertEqual = require("./assertEqual.js");
-
+//Take the first value in an array and return it
 const tail = function(arr) {
   if (arr.length === 0 || arr.length === 1) {
     return [];

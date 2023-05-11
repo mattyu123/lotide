@@ -2,7 +2,7 @@
   "name": "@matty123/lotide",
   "version": "1.0.0",
   "description": "Learning project made to be a mini version of the lodash library",
-  "main": "assertArraysEqual.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },

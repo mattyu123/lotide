@@ -27,6 +27,7 @@ const assertArraysEqual = function(testValue, expectedValue) {
   }
 };
 
+
 const without = function(source,itemsToRemove) {
   let final = [];
 
@@ -34,7 +35,7 @@ const without = function(source,itemsToRemove) {
     if (!itemsToRemove.includes(source[i])) {
       final.push(source[i]);
     }
-  } return final;
+  } return final; 
 };
 
 assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
