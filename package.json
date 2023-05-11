@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@matty123/lotide",
   "version": "1.0.0",
-  "description": "Lotide project library",
+  "description": "Learning project made to be a mini version of the lodash library",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,10 @@
     "type": "git",
     "url": "git+https://github.com/mattyu123/lotide.git"
   },
-  "author": "Matthew Yu",
+  "author": {
+    "name": "Matthew Yu",
+    "LinkedIn": "https://www.linkedin.com/in/matthew-yu/"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mattyu123/lotide/issues"
