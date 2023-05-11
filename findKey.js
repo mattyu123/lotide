@@ -49,3 +49,5 @@ assertEqual(findKey({
   "Drinks": { cost: 100},
   "Entertainment": { cost: 200}
 }, x => (x.cost / 2) >= 500), "Rent");
+
+module.exports = findKey;

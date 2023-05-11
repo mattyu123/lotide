@@ -50,5 +50,4 @@ assertArraysEqual(letterPositions("hello, my name is Matt").e, [1,11]);
 assertArraysEqual(letterPositions("hello, my name is Matt").o, [4]);
 assertArraysEqual(letterPositions("hello, my name is Matt").m, [6, 10, 14]);
 
-
-
+module.exports = letterPositions;

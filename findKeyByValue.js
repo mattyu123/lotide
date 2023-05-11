@@ -19,3 +19,5 @@ const findKeyByValue = function(object, value) {
 assertEqual(findKeyByValue({sci_fi: "The Expanse", comedy: "Brooklyn Nine-Nine", drama: "The Wire"}, "Brooklyn Nine-Nine"),"comedy");
 assertEqual(findKeyByValue({sci_fi: "The Expanse", comedy: "Brooklyn Nine-Nine", drama: "The Wire"}, "The Wire"), "drama");
 assertEqual(findKeyByValue({italian: "Pizza", japanese: "sushi", american: "burger"}, "burger"), "american");
+
+module.exports = findKeyByValue;

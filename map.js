@@ -40,3 +40,5 @@ const map = function(array, callback) {
 assertArraysEqual(map(["ground", "control", "to", "major", "tom"], word => word.length), [6,7,2,5,3]);
 assertArraysEqual(map([9, 64, 81, 121, 36], num => Math.sqrt(num)), [3,8,9,11,6]);
 assertArraysEqual(map([9, 64, 81, 121, 36], num => num * 2), [18, 128, 162, 242, 72]);
+
+module.exports = map;

@@ -27,7 +27,6 @@ const assertArraysEqual = function(testValue, expectedValue) {
   }
 };
 
-
 const without = function(source,itemsToRemove) {
   let final = [];
 
@@ -48,3 +47,4 @@ const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]);
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
+module.exports = without;
