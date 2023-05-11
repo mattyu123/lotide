@@ -1,4 +1,3 @@
-const assertEqual = require("../assertEqual.js");
 const head = require("../head.js");
 
 //Importing the basic chai code 

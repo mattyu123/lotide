@@ -1,17 +1,23 @@
-const assertEqual = require("../assertEqual.js");
 const tail = require("../tail.js");
 
-//Test cases for tail - Have to separate them out as assertEqual does not directly test whether an array of values equals another array of values
-const result = tail([1,2,3,4]);
-assertEqual(result.join(","), "2,3,4");
+//Importing the basic chai code
+const chai = require("chai");
+const assert = chai.assert;
 
-//Test case 1
-const result1 = tail([1]);
-assertEqual(result1.length,[].length);
+describe('tail', () => {
+  it("should return all the items after the first item in an array", function() {
+    const arr = [1,2,3,4];
+    assert.deepEqual(tail(arr), [2,3,4]);
+  });
 
-//Test case 2
-const result2 = tail([]);
-assertEqual(result2.length,[].length);
+  it("should return an empty array if there's only 1 item in an array", function() {
+    const arr = [1];
+    assert.deepEqual(tail(arr), []);
+  });
 
-
+  it("should return an empty array if there's zero items in an array", function() {
+    const arr = [];
+    assert.deepEqual(tail(arr), []);
+  });
+});
 
