@@ -1,4 +1,4 @@
-const eqArrays = function(arr1, arr2) {
+const eqArray = function(arr1, arr2) {
   let total = arr1.length - 1;
   let counter = 0;
 
@@ -19,4 +19,4 @@ const eqArrays = function(arr1, arr2) {
   }
 };
 
-module.exports = eqArrays;
+module.exports = eqArray;
