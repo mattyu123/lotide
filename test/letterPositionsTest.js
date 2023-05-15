@@ -15,16 +15,16 @@ describe('letterPositions', () => {
     const sentence = "hello my name is Matt";
     assert.deepEqual(letterPositions(sentence), {
       h: [ 0 ],
-      e: [ 1, 10 ],
+      e: [ 1, 12 ],
       l: [ 2, 3 ],
       o: [ 4 ],
-      m: [ 5, 9, 13 ],
-      y: [ 6 ],
-      n: [ 7 ],
-      a: [ 8, 14 ],
-      i: [ 11 ],
-      s: [ 12 ],
-      t: [ 15, 16 ]
+      m: [ 6, 11, 17 ],
+      y: [ 7 ],
+      n: [ 9 ],
+      a: [ 10, 18 ],
+      i: [ 14 ],
+      s: [ 15 ],
+      t: [ 19, 20 ]
     });
   });
 
@@ -32,9 +32,9 @@ describe('letterPositions', () => {
     const sentence = "hi!!!! I am Matt!!!!!";
     assert.deepEqual(letterPositions(sentence), { 
       h: [ 0 ], 
-      i: [ 1, 6 ], 
-      a: [ 7, 10 ], 
-      m: [ 8, 9 ], 
-      t: [ 11, 12 ]});
+      i: [ 1, 7 ], 
+      a: [ 9, 13 ], 
+      m: [ 10, 12 ], 
+      t: [ 14, 15 ] });
   });
 });

@@ -1,11 +1,4 @@
-const assertEqual = function(actual, expected) {
-  if (actual !== expected) {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} != ${expected}`);
-  } else {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  }
-};
-
+//Takes a sentence and returns how many times each letter appears in the sentence
 const countLetters = function(sentence){
   const newSentence = sentence.toLowerCase().split(" ").join("");
   const letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];

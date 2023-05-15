@@ -10,6 +10,12 @@ describe('middle', () => {
     assert.deepEqual(middle(arr), [2,3]);
   });
 
+  it("should return an empty array if passed an empty array as an argument", function() {
+    const arr = [];
+    assert.deepEqual(middle(arr), []);
+
+  })
+
   it("should return one value when the number of items in the array is odd", function() {
     const arr = [1,2,3];
     assert.deepEqual(middle(arr), [2]);
