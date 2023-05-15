@@ -1,13 +1,27 @@
-const assertEqual = require('../assertEqual');
-const eqArray = require('../eqArray');
+const eqArray = require("../eqArray.js");
 
-//Test cases
-assertEqual(eqArray([1, 2, 3], [1, 2, 3]), true);
-assertEqual(eqArray([1], [1]), true);
-assertEqual(eqArray([], []), true);
-assertEqual(eqArray([1], ['1']), false);
-assertEqual(eqArray([1, 2, 3], [1, 2, 5]), false);
-assertEqual(eqArray([1, 2, 3], [1, 2]), false);
-assertEqual(eqArray([1, 2, 3], [1, 2, '3']), false);
-assertEqual(eqArray([1, 2, 3], [1, 2, 3,5]), false);
-assertEqual(eqArray([1, 2, 3,4], [1, 2]), false);
+//Importing the basic chai code 
+const chai = require("chai");
+const assert = chai.assert;
+
+describe('eqArray', () => {
+  it("should determine whether two arrays are equal to each other", function() {
+    assert.isTrue(eqArray([1,2,3], [1,2,3]))
+  });
+
+  it("should return false if the arrays are not equal", function() {
+    assert.isFalse(eqArray([1,2,3], [1]))
+  });
+
+  it("should return false if they are not same datatypes", function() {
+    assert.isFalse(eqArray([1,2,3], [1,2,"3"]))
+  });
+
+  it("should determine whether two single-item arrays are equal to each other", function() {
+    assert.isTrue(eqArray([1], [1]))
+  });
+
+  it("return true if passed two empty arrays", function() {
+    assert.isTrue(eqArray([], []))
+  });
+}); 

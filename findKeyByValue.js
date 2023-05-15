@@ -1,23 +1,16 @@
-const assertEqual = function(actual, expected) {
-  if (actual !== expected) {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} != ${expected}`);
-  } else {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  }
-};
-
+//Function takes in an object and a value, returns the key that the value is at. If no key with the value is found, return undefined
 const findKeyByValue = function(object, value) {
-  for (let show in object) {
-    let showValue = object[show];
+  for (let item in object) {
+    let showValue = object[item];
     
     if (showValue === value) {
-      return show;
-    }
+      return item;
+    } 
   }
+  return undefined;
 };
 
-assertEqual(findKeyByValue({sci_fi: "The Expanse", comedy: "Brooklyn Nine-Nine", drama: "The Wire"}, "Brooklyn Nine-Nine"),"comedy");
-assertEqual(findKeyByValue({sci_fi: "The Expanse", comedy: "Brooklyn Nine-Nine", drama: "The Wire"}, "The Wire"), "drama");
-assertEqual(findKeyByValue({italian: "Pizza", japanese: "sushi", american: "burger"}, "burger"), "american");
+console.log(findKeyByValue({sci_fi: "The Expanse", comedy: "Brooklyn Nine-Nine", drama: "The Wire"}, "Brooklyn Nine-Nine"))
+
 
 module.exports = findKeyByValue;

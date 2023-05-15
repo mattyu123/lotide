@@ -1,3 +1,4 @@
+//Function takes two arrays and compares them to see if they're equal
 const eqArray = function(arr1, arr2) {
   let total = arr1.length - 1;
   let counter = 0;
