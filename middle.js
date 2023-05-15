@@ -3,7 +3,9 @@ const middle = function(array){
   let index2 = (array.length/2);
   let final = [];
 
-  if (array.length === 1 || array.length === 2){
+  if (array.length === 0) {
+    return [];
+  } else if (array.length === 1 || array.length === 2){
     return [];
   } else if (array.length % 2 !== 0){
       final.push(array[Math.floor(array.length / 2)])
@@ -12,5 +14,8 @@ const middle = function(array){
       return [array[index1], array[index2]];
   }
 };
+
+console.log(middle([]))
+
 
 module.exports = middle;
